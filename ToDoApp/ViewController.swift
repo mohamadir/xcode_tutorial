@@ -18,6 +18,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var output: UILabel!
     
+    
+    
+    @IBAction func onPost(_ sender: Any) {
+        
+        
+        
+        
+    }
+    
+    
+    
     @IBAction func action(_ sender: Any) {
         
         self.output.text = input.text
@@ -32,7 +43,6 @@ class ViewController: UIViewController {
             guard let data = data else { return }
             do{
                 let course = try JSONDecoder().decode([Course].self, from: data)
-                
                 print(course.count)
                 
             } catch let jsonErr {
